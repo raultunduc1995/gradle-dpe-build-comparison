@@ -1,0 +1,14 @@
+plugins {
+  id 'com.gradle.enterprise' version '3.12.2'
+}
+
+rootProject.name = "03-build-comparison"
+
+gradleEnterprise {
+  buildScan {
+    server = "https://enterprise-training.gradle.com"
+    publishAlways()
+    capture { taskInputFiles = true }
+    tag("lab03")
+  }
+}
